@@ -30,7 +30,7 @@ O sistema é organizado em torno das seguintes classes principais:
     git clone [https://github.com/nova-account/controle-estoque-alimentos.git](https://github.com/nova-account/controle-estoque-alimentos.git)
     ```
 2.  **Abra no IntelliJ IDEA:** Abra o IntelliJ, selecione "Open" e aponte para a pasta do projeto que foi clonada.
-3.  **Execute:** Encontre o arquivo `Programa.java`, clique com o botão direito e selecione "Run 'Programa.main()'".
+3.  **Execute:** Encontre o arquivo `Programa.java`, clique com o botão direito e selecione "Run 'Programa.java()'".
 
 ---
 ## Tecnologias Utilizadas
