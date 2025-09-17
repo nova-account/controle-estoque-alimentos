@@ -4,7 +4,7 @@ public class Programa {
 
     public static void main(String[] args) {
         // 1. Iniciar o serviço de estoque
-        EstoqueService servico = new EstoqueService();
+        ServicoDeEstoque servico = new ServicoDeEstoque();
 
         // 2. Criar alguns produtos para teste
         Produto arroz = new Produto(1, "Arroz Parboilizado", "Grãos", "kg", 50, LocalDate.of(2026, 9, 17), 10);
