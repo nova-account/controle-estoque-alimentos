@@ -1,6 +1,6 @@
 # Sistema de Controle de Estoque de Alimentos
 
-Este projeto é um sistema de software desenvolvido em Java para gerenciar o estoque de produtos alimentícios, com foco no controle de lotes e datas de validade.
+Este projeto é um sistema de software desenvolvido em Java para gerenciar o estoque de produtos alimentícios, com foco no controle de lotes e datas de validade, voltado para serviços de alimentação.
 
 ---
 ## Funcionalidades Principais
