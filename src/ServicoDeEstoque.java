@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class EstoqueService {
+public class ServicoDeEstoque {
 
     private List<Produto> produtos = new ArrayList<>();
     private List<Funcionario> funcionarios = new ArrayList<>();
