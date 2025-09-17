@@ -5,7 +5,7 @@ Este projeto é um sistema de software desenvolvido em Java para gerenciar o est
 ---
 ## Funcionalidades Principais
 
-* **Cadastro de Produtos e Fornecedores:** Gerencia o catálogo de produtos e de onde eles vêm.
+* **Cadastro de Produtos e Fornecedores:** Gerencia o catálogo de produtos e a sua origem quanto ao fornecimento.
 * **Controle de Lotes por Validade:** Cada entrada de um produto é tratada como um lote único, com sua própria quantidade e data de validade.
 * **Rastreabilidade:** Mantém um histórico detalhado de todas as movimentações de estoque (entradas, saídas e perdas).
 * **Consultas Inteligentes:** Permite a consulta de estoque disponível e a identificação de produtos próximos ao vencimento.
