@@ -56,6 +56,8 @@ public class Programa {
         System.out.println("----------------------------------\n");
 
         // 7. Listar produtos próximos da validade (ex: nos próximos 400 dias)
+        // A data de hoje é 18 de setembro de 2025. 400 dias a partir de hoje alcança outubro de 2026.
+        // O leite vence em 20 de outubro de 2025, então ele deve aparecer.
         List<Produto> produtosProximosValidade = servico.listarProdutosProximosDaValidade(400);
         System.out.println("--- RELATÓRIO DE VALIDADE (Próximos 400 dias) ---");
         if (produtosProximosValidade.isEmpty()) {
