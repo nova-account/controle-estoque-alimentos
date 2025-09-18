@@ -12,21 +12,10 @@ public class Movimentacao {
         this.funcionario = funcionario;
         this.tipo = tipo;
         this.quantidade = quantidade;
-        this.dataHora = LocalDateTime.now(); // Grava o momento exato da movimentação
+        this.dataHora = LocalDateTime.now(); // Registra a data e hora exatas da movimentação
     }
 
-    @Override
-    public String toString() {
-        return "Movimentacao{" +
-                "dataHora=" + dataHora +
-                ", produto=" + produto.getNome() +
-                ", tipo=" + tipo +
-                ", quantidade=" + quantidade +
-                ", funcionario=" + funcionario.getNome() +
-                '}';
-    }
-
-    // --- Getters ---
+    // Getters
     public Produto getProduto() { return produto; }
     public Funcionario getFuncionario() { return funcionario; }
     public TipoMovimentacao getTipo() { return tipo; }
