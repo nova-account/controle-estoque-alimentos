@@ -1,42 +1,35 @@
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Movimentacao {
-    private int id;
     private Produto produto;
-    private int quantidade;
-    private String tipo; // "entrada" ou "saida"
     private Funcionario funcionario;
-    private LocalDate data;
+    private TipoMovimentacao tipo;
+    private int quantidade;
+    private LocalDateTime dataHora;
 
-    public Movimentacao(int id, Produto produto, int quantidade, String tipo,
-                        Funcionario funcionario, LocalDate data) {
-        this.id = id;
+    public Movimentacao(Produto produto, Funcionario funcionario, TipoMovimentacao tipo, int quantidade) {
         this.produto = produto;
-        this.quantidade = quantidade;
-        this.tipo = tipo;
         this.funcionario = funcionario;
-        this.data = data;
+        this.tipo = tipo;
+        this.quantidade = quantidade;
+        this.dataHora = LocalDateTime.now(); // Grava o momento exato da movimentação
     }
 
-    public void aplicar() {
-        if (tipo.equalsIgnoreCase("entrada")) {
-            produto.atualizarQuantidade(quantidade);
-        } else if (tipo.equalsIgnoreCase("saida")) {
-            produto.atualizarQuantidade(-quantidade);
-        }
+    @Override
+    public String toString() {
+        return "Movimentacao{" +
+                "dataHora=" + dataHora +
+                ", produto=" + produto.getNome() +
+                ", tipo=" + tipo +
+                ", quantidade=" + quantidade +
+                ", funcionario=" + funcionario.getNome() +
+                '}';
     }
 
-    // --- Getters e Setters ---
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    // --- Getters ---
     public Produto getProduto() { return produto; }
-    public void setProduto(Produto produto) { this.produto = produto; }
-    public int getQuantidade() { return quantidade; }
-    public void setQuantidade(int quantidade) { this.quantidade = quantidade; }
-    public String getTipo() { return tipo; }
-    public void setTipo(String tipo) { this.tipo = tipo; }
     public Funcionario getFuncionario() { return funcionario; }
-    public void setFuncionario(Funcionario funcionario) { this.funcionario = funcionario; }
-    public LocalDate getData() { return data; }
-    public void setData(LocalDate data) { this.data = data; }
+    public TipoMovimentacao getTipo() { return tipo; }
+    public int getQuantidade() { return quantidade; }
+    public LocalDateTime getDataHora() { return dataHora; }
 }
