@@ -1,7 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ServicoDeEstoque {
     private List<Produto> produtos = new ArrayList<>();
@@ -47,26 +46,36 @@ public class ServicoDeEstoque {
     }
 
     public List<Produto> getProdutos() {
-        return new ArrayList<>(produtos); // Retorna uma cópia para proteger a lista original
+        return new ArrayList<>(produtos);
     }
 
     public List<Produto> listarProdutosComEstoqueBaixo() {
-        return produtos.stream()
-                .filter(Produto::isEstoqueBaixo)
-                .collect(Collectors.toList());
+        List<Produto> produtosComEstoqueBaixo = new ArrayList<>();
+        for (Produto p : produtos) {
+            if (p.isEstoqueBaixo()) {
+                produtosComEstoqueBaixo.add(p);
+            }
+        }
+        return produtosComEstoqueBaixo;
     }
 
     public List<Produto> listarProdutosProximosDaValidade(int dias) {
         LocalDate dataLimite = LocalDate.now().plusDays(dias);
-        return produtos.stream()
-                .filter(p -> p.getDataValidade().isBefore(dataLimite))
-                .collect(Collectors.toList());
+        List<Produto> produtosProximos = new ArrayList<>();
+        for (Produto p : produtos) {
+            if (p.getDataValidade().isBefore(dataLimite)) {
+                produtosProximos.add(p);
+            }
+        }
+        return produtosProximos;
     }
 
     private Produto encontrarProdutoPorId(int id) {
-        return produtos.stream()
-                .filter(p -> p.getId() == id)
-                .findFirst()
-                .orElse(null);
+        for (Produto p : produtos) {
+            if (p.getId() == id) {
+                return p;
+            }
+        }
+        return null;
     }
 }
