@@ -1,7 +1,6 @@
 import java.time.LocalDateTime;
 
 public class Produto {
-    // Atributos
     private String ID;
     private String nome;
     private String unidadeMedida;
@@ -13,11 +12,10 @@ public class Produto {
     private LocalDateTime vencimento;
     private double preco;
 
-    // Construtor padrão
-    public Produto() {
-    }
 
-    // Construtor completo
+    public Produto() {
+
+
     public Produto(String ID, String nome, String unidadeMedida, int pesoGramas, int quantidadeEstoque,
                    String categoria, String lote, String fornecedor, LocalDateTime vencimento, double preco) {
         this.ID = ID;
@@ -32,7 +30,7 @@ public class Produto {
         this.preco = preco;
     }
 
-    // Getters e Setters
+
     public String getID() { return ID; }
     public void setID(String ID) { this.ID = ID; }
 
@@ -63,8 +61,7 @@ public class Produto {
     public double getPreco() { return preco; }
     public void setPreco(double preco) { this.preco = preco; }
 
-    // toString formatado em várias linhas
-    @Override
+
     public String toString() {
         return "\n=== Produto ===" +
                "\nID: " + ID +
